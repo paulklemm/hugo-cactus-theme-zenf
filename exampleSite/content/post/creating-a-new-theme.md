@@ -1070,7 +1070,7 @@ It's common to have posts display the date that they were written or published, 
 We'll start by updating the template used to render the posts. The template code will look like:
 
 ```
-{{ .Date.Format "Mon, Jan 2, 2006" }}
+{{ .Date.Format "Jan 2, 2006" }}
 ```
 
 Posts use the default single template, so we'll change that file.
@@ -1080,7 +1080,7 @@ $ vi themes/zafta/layouts/_default/single.html
 {{ partial "header.html" . }}
 
   <h1>{{ .Title }}</h1>
-  <h2>{{ .Date.Format "Mon, Jan 2, 2006" }}</h2>
+  <h2>{{ .Date.Format "Jan 2, 2006" }}</h2>
   {{ .Content }}
 
 {{ partial "footer.html" . }}
@@ -1116,7 +1116,7 @@ $ vi themes/zafta/layouts/post/single.html
 {{ partial "header.html" . }}
 
   <h1>{{ .Title }}</h1>
-  <h2>{{ .Date.Format "Mon, Jan 2, 2006" }}</h2>
+  <h2>{{ .Date.Format "Jan 2, 2006" }}</h2>
   {{ .Content }}
 
 {{ partial "footer.html" . }}
