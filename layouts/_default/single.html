@@ -7,7 +7,9 @@
                 <header>
                     <h1>{{ .Title }}</h1>
                     <h2 class="headline">
+                    {{ if not .Params.hidedate }}
                     {{ .Date.Format "January 2, 2006" }} 
+                    {{ end }}
                     <br>
                     {{ with .Params.tags }}
                     {{ if ge (len .) 1 }}
